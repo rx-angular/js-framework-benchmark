@@ -1,1 +1,402 @@
-[{"framework":"angular-ng-v10.0.4-keyed","benchmark":"01_run1k","values":[]},{"framework":"angular-ng-v10.0.4-keyed","benchmark":"02_replace1k","values":[]},{"framework":"angular-ng-v10.0.4-keyed","benchmark":"03_update10th1k_x16","values":[]},{"framework":"angular-ng-v10.0.4-keyed","benchmark":"04_select1k","values":[]},{"framework":"angular-ng-v10.0.4-keyed","benchmark":"05_swap1k","values":[]},{"framework":"angular-ng-v10.0.4-keyed","benchmark":"06_remove-one-1k","values":[]},{"framework":"angular-ng-v10.0.4-keyed","benchmark":"07_create10k","values":[]},{"framework":"angular-ng-v10.0.4-keyed","benchmark":"08_create1k-after1k_x2","values":[]},{"framework":"angular-ng-v10.0.4-keyed","benchmark":"09_clear1k_x8","values":[]},{"framework":"angular-ng-v10.0.4-keyed","benchmark":"21_ready-memory","values":[]},{"framework":"angular-ng-v10.0.4-keyed","benchmark":"22_run-memory","values":[]},{"framework":"angular-ng-v10.0.4-keyed","benchmark":"23_update5-memory","values":[]},{"framework":"angular-ng-v10.0.4-keyed","benchmark":"24_run5-memory","values":[]},{"framework":"angular-ng-v10.0.4-keyed","benchmark":"25_run-clear-memory","values":[]},{"framework":"angular-ng-v10.0.4-keyed","benchmark":"31_startup-ci","values":[3240.86,3323.925,3339.585,3234.975]},{"framework":"angular-ng-v10.0.4-keyed","benchmark":"32_startup-bt","values":[477.996,600.1400000000001,618.108,626.7440000000001]},{"framework":"angular-ng-v10.0.4-keyed","benchmark":"34_startup-totalbytes","values":[295.39453125,295.39453125,295.39453125,295.39453125]},{"framework":"angular-rx-angular-v10.0.4-keyed","benchmark":"01_run1k","values":[]},{"framework":"angular-rx-angular-v10.0.4-keyed","benchmark":"02_replace1k","values":[]},{"framework":"angular-rx-angular-v10.0.4-keyed","benchmark":"03_update10th1k_x16","values":[]},{"framework":"angular-rx-angular-v10.0.4-keyed","benchmark":"04_select1k","values":[]},{"framework":"angular-rx-angular-v10.0.4-keyed","benchmark":"05_swap1k","values":[]},{"framework":"angular-rx-angular-v10.0.4-keyed","benchmark":"06_remove-one-1k","values":[]},{"framework":"angular-rx-angular-v10.0.4-keyed","benchmark":"07_create10k","values":[]},{"framework":"angular-rx-angular-v10.0.4-keyed","benchmark":"08_create1k-after1k_x2","values":[]},{"framework":"angular-rx-angular-v10.0.4-keyed","benchmark":"09_clear1k_x8","values":[]},{"framework":"angular-rx-angular-v10.0.4-keyed","benchmark":"21_ready-memory","values":[]},{"framework":"angular-rx-angular-v10.0.4-keyed","benchmark":"22_run-memory","values":[]},{"framework":"angular-rx-angular-v10.0.4-keyed","benchmark":"23_update5-memory","values":[]},{"framework":"angular-rx-angular-v10.0.4-keyed","benchmark":"24_run5-memory","values":[]},{"framework":"angular-rx-angular-v10.0.4-keyed","benchmark":"25_run-clear-memory","values":[]},{"framework":"angular-rx-angular-v10.0.4-keyed","benchmark":"31_startup-ci","values":[3333.75,3262.47,3361.4750000000004,3356.5299999999997]},{"framework":"angular-rx-angular-v10.0.4-keyed","benchmark":"32_startup-bt","values":[769.5640000000001,600.5560000000002,597.48,815.0600000000002]},{"framework":"angular-rx-angular-v10.0.4-keyed","benchmark":"34_startup-totalbytes","values":[295.39453125,295.39453125,295.39453125,295.39453125]},{"framework":"vanillajs-keyed","benchmark":"01_run1k","values":[]},{"framework":"vanillajs-keyed","benchmark":"02_replace1k","values":[]},{"framework":"vanillajs-keyed","benchmark":"03_update10th1k_x16","values":[]},{"framework":"vanillajs-keyed","benchmark":"04_select1k","values":[]},{"framework":"vanillajs-keyed","benchmark":"05_swap1k","values":[]},{"framework":"vanillajs-keyed","benchmark":"06_remove-one-1k","values":[]},{"framework":"vanillajs-keyed","benchmark":"07_create10k","values":[]},{"framework":"vanillajs-keyed","benchmark":"08_create1k-after1k_x2","values":[]},{"framework":"vanillajs-keyed","benchmark":"09_clear1k_x8","values":[]},{"framework":"vanillajs-keyed","benchmark":"21_ready-memory","values":[]},{"framework":"vanillajs-keyed","benchmark":"22_run-memory","values":[]},{"framework":"vanillajs-keyed","benchmark":"23_update5-memory","values":[]},{"framework":"vanillajs-keyed","benchmark":"24_run5-memory","values":[]},{"framework":"vanillajs-keyed","benchmark":"25_run-clear-memory","values":[]},{"framework":"vanillajs-keyed","benchmark":"31_startup-ci","values":[1979.9,2006.92,2072.335,2083.64]},{"framework":"vanillajs-keyed","benchmark":"32_startup-bt","values":[39.6,29.656,27.571999999999992,35.01599999999999]},{"framework":"vanillajs-keyed","benchmark":"34_startup-totalbytes","values":[150.5126953125,150.5126953125,150.5126953125,150.5126953125]}]
+[
+  {
+    "framework": "angular-ng-v11.0.9-keyed",
+    "benchmark": "01_run1k",
+    "values": []
+  },
+  {
+    "framework": "angular-ng-v11.0.9-keyed",
+    "benchmark": "02_replace1k",
+    "values": []
+  },
+  {
+    "framework": "angular-ng-v11.0.9-keyed",
+    "benchmark": "03_update10th1k_x16",
+    "values": []
+  },
+  {
+    "framework": "angular-ng-v11.0.9-keyed",
+    "benchmark": "04_select1k",
+    "values": []
+  },
+  {
+    "framework": "angular-ng-v11.0.9-keyed",
+    "benchmark": "05_swap1k",
+    "values": []
+  },
+  {
+    "framework": "angular-ng-v11.0.9-keyed",
+    "benchmark": "06_remove-one-1k",
+    "values": []
+  },
+  {
+    "framework": "angular-ng-v11.0.9-keyed",
+    "benchmark": "07_create10k",
+    "values": []
+  },
+  {
+    "framework": "angular-ng-v11.0.9-keyed",
+    "benchmark": "08_create1k-after1k_x2",
+    "values": []
+  },
+  {
+    "framework": "angular-ng-v11.0.9-keyed",
+    "benchmark": "09_clear1k_x8",
+    "values": []
+  },
+  {
+    "framework": "angular-ng-v11.0.9-keyed",
+    "benchmark": "21_ready-memory",
+    "values": []
+  },
+  {
+    "framework": "angular-ng-v11.0.9-keyed",
+    "benchmark": "22_run-memory",
+    "values": []
+  },
+  {
+    "framework": "angular-ng-v11.0.9-keyed",
+    "benchmark": "23_update5-memory",
+    "values": []
+  },
+  {
+    "framework": "angular-ng-v11.0.9-keyed",
+    "benchmark": "24_run5-memory",
+    "values": []
+  },
+  {
+    "framework": "angular-ng-v11.0.9-keyed",
+    "benchmark": "25_run-clear-memory",
+    "values": []
+  },
+  {
+    "framework": "angular-ng-v11.0.9-keyed",
+    "benchmark": "31_startup-ci",
+    "values": [
+      3959.2399999999993,
+      3207.345,
+      3573.5599999999995,
+      3095.27
+    ]
+  },
+  {
+    "framework": "angular-ng-v11.0.9-keyed",
+    "benchmark": "32_startup-bt",
+    "values": [
+      1317.4360000000001,
+      544.684,
+      822.568,
+      497.4480000000001
+    ]
+  },
+  {
+    "framework": "angular-ng-v11.0.9-keyed",
+    "benchmark": "34_startup-totalbytes",
+    "values": [
+      294.3984375,
+      294.3984375,
+      294.3984375,
+      294.3984375
+    ]
+  },
+  {
+    "framework": "angular-rx-angular-local-v11.0.9-keyed",
+    "benchmark": "01_run1k",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-local-v11.0.9-keyed",
+    "benchmark": "02_replace1k",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-local-v11.0.9-keyed",
+    "benchmark": "03_update10th1k_x16",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-local-v11.0.9-keyed",
+    "benchmark": "04_select1k",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-local-v11.0.9-keyed",
+    "benchmark": "05_swap1k",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-local-v11.0.9-keyed",
+    "benchmark": "06_remove-one-1k",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-local-v11.0.9-keyed",
+    "benchmark": "07_create10k",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-local-v11.0.9-keyed",
+    "benchmark": "08_create1k-after1k_x2",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-local-v11.0.9-keyed",
+    "benchmark": "09_clear1k_x8",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-local-v11.0.9-keyed",
+    "benchmark": "21_ready-memory",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-local-v11.0.9-keyed",
+    "benchmark": "22_run-memory",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-local-v11.0.9-keyed",
+    "benchmark": "23_update5-memory",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-local-v11.0.9-keyed",
+    "benchmark": "24_run5-memory",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-local-v11.0.9-keyed",
+    "benchmark": "25_run-clear-memory",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-local-v11.0.9-keyed",
+    "benchmark": "31_startup-ci",
+    "values": [
+      3319.245,
+      3348.9700000000003,
+      3284.8250000000003,
+      3615.3599999999997
+    ]
+  },
+  {
+    "framework": "angular-rx-angular-local-v11.0.9-keyed",
+    "benchmark": "32_startup-bt",
+    "values": [
+      413.96799999999996,
+      480.8120000000001,
+      344.22399999999993,
+      601.0640000000002
+    ]
+  },
+  {
+    "framework": "angular-rx-angular-local-v11.0.9-keyed",
+    "benchmark": "34_startup-totalbytes",
+    "values": [
+      329.87890625,
+      329.87890625,
+      329.87890625,
+      329.87890625
+    ]
+  },
+  {
+    "framework": "angular-rx-angular-normal-v11.0.9-keyed",
+    "benchmark": "01_run1k",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-normal-v11.0.9-keyed",
+    "benchmark": "02_replace1k",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-normal-v11.0.9-keyed",
+    "benchmark": "03_update10th1k_x16",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-normal-v11.0.9-keyed",
+    "benchmark": "04_select1k",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-normal-v11.0.9-keyed",
+    "benchmark": "05_swap1k",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-normal-v11.0.9-keyed",
+    "benchmark": "06_remove-one-1k",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-normal-v11.0.9-keyed",
+    "benchmark": "07_create10k",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-normal-v11.0.9-keyed",
+    "benchmark": "08_create1k-after1k_x2",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-normal-v11.0.9-keyed",
+    "benchmark": "09_clear1k_x8",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-normal-v11.0.9-keyed",
+    "benchmark": "21_ready-memory",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-normal-v11.0.9-keyed",
+    "benchmark": "22_run-memory",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-normal-v11.0.9-keyed",
+    "benchmark": "23_update5-memory",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-normal-v11.0.9-keyed",
+    "benchmark": "24_run5-memory",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-normal-v11.0.9-keyed",
+    "benchmark": "25_run-clear-memory",
+    "values": []
+  },
+  {
+    "framework": "angular-rx-angular-normal-v11.0.9-keyed",
+    "benchmark": "31_startup-ci",
+    "values": [
+      3353.6800000000003,
+      3189.8,
+      3283.1799999999994,
+      3294.63
+    ]
+  },
+  {
+    "framework": "angular-rx-angular-normal-v11.0.9-keyed",
+    "benchmark": "32_startup-bt",
+    "values": [
+      466.31600000000003,
+      314.072,
+      330.57199999999995,
+      345.548
+    ]
+  },
+  {
+    "framework": "angular-rx-angular-normal-v11.0.9-keyed",
+    "benchmark": "34_startup-totalbytes",
+    "values": [
+      329.87890625,
+      329.87890625,
+      329.87890625,
+      329.87890625
+    ]
+  },
+  {
+    "framework": "vanillajs-keyed",
+    "benchmark": "01_run1k",
+    "values": []
+  },
+  {
+    "framework": "vanillajs-keyed",
+    "benchmark": "02_replace1k",
+    "values": []
+  },
+  {
+    "framework": "vanillajs-keyed",
+    "benchmark": "03_update10th1k_x16",
+    "values": []
+  },
+  {
+    "framework": "vanillajs-keyed",
+    "benchmark": "04_select1k",
+    "values": []
+  },
+  {
+    "framework": "vanillajs-keyed",
+    "benchmark": "05_swap1k",
+    "values": []
+  },
+  {
+    "framework": "vanillajs-keyed",
+    "benchmark": "06_remove-one-1k",
+    "values": []
+  },
+  {
+    "framework": "vanillajs-keyed",
+    "benchmark": "07_create10k",
+    "values": []
+  },
+  {
+    "framework": "vanillajs-keyed",
+    "benchmark": "08_create1k-after1k_x2",
+    "values": []
+  },
+  {
+    "framework": "vanillajs-keyed",
+    "benchmark": "09_clear1k_x8",
+    "values": []
+  },
+  {
+    "framework": "vanillajs-keyed",
+    "benchmark": "21_ready-memory",
+    "values": []
+  },
+  {
+    "framework": "vanillajs-keyed",
+    "benchmark": "22_run-memory",
+    "values": []
+  },
+  {
+    "framework": "vanillajs-keyed",
+    "benchmark": "23_update5-memory",
+    "values": []
+  },
+  {
+    "framework": "vanillajs-keyed",
+    "benchmark": "24_run5-memory",
+    "values": []
+  },
+  {
+    "framework": "vanillajs-keyed",
+    "benchmark": "25_run-clear-memory",
+    "values": []
+  },
+  {
+    "framework": "vanillajs-keyed",
+    "benchmark": "31_startup-ci",
+    "values": [
+      1979.9,
+      2006.92,
+      2072.335,
+      2083.64
+    ]
+  },
+  {
+    "framework": "vanillajs-keyed",
+    "benchmark": "32_startup-bt",
+    "values": [
+      39.6,
+      29.656,
+      27.571999999999992,
+      35.01599999999999
+    ]
+  },
+  {
+    "framework": "vanillajs-keyed",
+    "benchmark": "34_startup-totalbytes",
+    "values": [
+      150.5126953125,
+      150.5126953125,
+      150.5126953125,
+      150.5126953125
+    ]
+  }
+]
