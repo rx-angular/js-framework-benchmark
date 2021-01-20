@@ -1,9 +1,9 @@
 {
-  "name": "js-framework-benchmark-angular-rx-angular-normal",
+  "name": "js-framework-benchmark-angular-native",
   "version": "0.0.0",
   "js-framework-benchmark": {
     "frameworkVersionFromPackage": "@angular/core",
-    "customURL": "/dist/angular-rx-angular-normal/"
+    "customURL": "/dist/angular-native/"
   },
   "scripts": {
     "ng": "ng",
@@ -15,10 +15,6 @@
     "build-dev": "ng serve"
   },
   "private": true,
-  "dependencies": {
-
-  },
-  "devDependencies": {
-
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }

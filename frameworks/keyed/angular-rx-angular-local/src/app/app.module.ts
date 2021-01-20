@@ -2,8 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {RxForModule} from "./for";
-import {UnpatchEventsModule} from "./unpatch";
+import {RxForModule, UnpatchEventsModule} from "@rx-angular";
 
 @NgModule({
   declarations: [

@@ -1,8 +1,7 @@
 import {Component, NgModule, VERSION} from '@angular/core';
 import {BehaviorSubject} from "rxjs";
 import {BrowserModule} from "@angular/platform-browser";
-import {RxForModule} from "./for";
-import {UnpatchEventsModule} from "./unpatch";
+import {RxForModule, UnpatchEventsModule} from "@rx-angular";
 
 interface Data {
     id: number;

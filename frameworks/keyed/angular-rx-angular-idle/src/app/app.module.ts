@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {RxForModule, UnpatchEventsModule, RX_PRIMARY_STRATEGY} from "@rx-angular";
 
+
+
 @NgModule({
   declarations: [
     AppComponent
