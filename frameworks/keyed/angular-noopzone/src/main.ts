@@ -1,15 +1,13 @@
-import { platformBrowser } from '@angular/platform-browser';
-import { enableProdMode, ApplicationRef } from '@angular/core';
-import { AppModuleNgFactory } from './app.ngfactory';
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-window['Zone'] = {
-  get current() { return this },
-  assertZonePatched() { },
-  fork() { return this },
-  get() { return true },
-  run(fn: Function) { return fn() },
-  runGuarded(fn: Function) { return fn() },
-}
+import { AppModule } from './app/app.module';
+import { environment } from './environments/environment';
 
-enableProdMode();
-platformBrowser().bootstrapModuleFactory(AppModuleNgFactory, { ngZone: 'noop' })
+// if (environment.production) {
+  enableProdMode();
+// }
+
+
+platformBrowserDynamic().bootstrapModule(AppModule, { ngZone: 'noop' })
+  .catch(err => console.error(err));
