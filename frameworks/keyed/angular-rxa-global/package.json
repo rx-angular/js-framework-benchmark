@@ -1,13 +1,13 @@
 {
-  "name": "js-framework-benchmark-angular-native",
+  "name": "js-framework-benchmark-rx-angular-global",
   "version": "0.0.0",
   "js-framework-benchmark": {
     "frameworkVersionFromPackage": "@angular/core",
-    "customURL": "/dist/angular-native/"
+    "customURL": "/dist/angular-rx-angular-global/"
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

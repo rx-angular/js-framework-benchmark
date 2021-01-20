@@ -18,7 +18,7 @@ import {RxForModule, UnpatchEventsModule, RX_PRIMARY_STRATEGY} from "@rx-angular
   providers: [
     {
       provide: RX_PRIMARY_STRATEGY,
-      useValue: 'idle'
+      useValue: 'native'
     }
   ],
   bootstrap: [AppComponent]
