@@ -13,7 +13,7 @@ interface Data {
             <div class="jumbotron">
                 <div class="row">
                     <div class="col-md-6">
-                        <h1>Angular {{version}} keyed</h1>
+                        <h1>Angular {{version}} keyed (native)</h1>
                     </div>
                     <div class="col-md-6">
                         <div class="col-sm-6 smallpad">

@@ -98,7 +98,7 @@ const benchUpdate = new class extends Benchmark {
             label: "partial update",
             description: "updating every 10th row for 1,000 rows (3 warmup runs). 16x CPU slowdown.",
             type: BenchmarkType.CPU,
-            throttleCPU: 16,
+           // throttleCPU: 16,
             allowBatching: true
         })
     }
@@ -124,7 +124,7 @@ const benchSelect = new class extends Benchmark {
             label: "select row",
             description: "highlighting a selected row. (no warmup runs). 16x CPU slowdown.",
             type: BenchmarkType.CPU,
-            throttleCPU: 16,
+           // throttleCPU: 16,
             allowBatching: true
         })
     }
@@ -146,7 +146,7 @@ const benchSwapRows = new class extends Benchmark {
             label: "swap rows",
             description: "swap 2 rows for table with 1,000 rows. (" + config.WARMUP_COUNT + " warmup runs). 4x CPU slowdown.",
             type: BenchmarkType.CPU,
-            throttleCPU: 4,
+           // throttleCPU: 4,
             allowBatching: true
         })
     }
@@ -227,7 +227,7 @@ const benchAppendToManyRows = new class extends Benchmark {
             label: "append rows to large table",
             description: "appending 1,000 to a table of 10,000 rows. 2x CPU slowdown",
             type: BenchmarkType.CPU,
-            throttleCPU: 2,
+          //  throttleCPU: 2,
             allowBatching: true
         })
     }
@@ -249,7 +249,7 @@ const benchClear = new class extends Benchmark {
             label: "clear rows",
             description: "clearing a table with 1,000 rows. 8x CPU slowdown",
             type: BenchmarkType.CPU,
-            throttleCPU: 8,
+          //  throttleCPU: 8,
             allowBatching: true
         })
     }
@@ -451,7 +451,7 @@ export let benchmarks : Array<Benchmark> = [
   //  benchUpdate5Memory,
   //  benchReplace5Memory,
   //  benchCreateClear5Memory,
-    benchStartup,
+ //   benchStartup,
 ];
 
 export function fileName(framework: FrameworkData, benchmark: BenchmarkInfo) {

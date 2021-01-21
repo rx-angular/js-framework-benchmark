@@ -1,9 +1,9 @@
 {
-  "name": "js-framework-benchmark-rx-angular-idle",
+  "name": "js-framework-benchmark-rxa-idle",
   "version": "0.0.0",
   "js-framework-benchmark": {
     "frameworkVersionFromPackage": "@angular/core",
-    "customURL": "/dist/angular-rx-angular-idle/"
+    "customURL": "/dist/angular-rxa-idle/"
   },
   "scripts": {
     "ng": "ng",

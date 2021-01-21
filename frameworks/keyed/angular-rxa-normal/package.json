@@ -1,9 +1,9 @@
 {
-  "name": "js-framework-benchmark-angular-rx-angular-loca",
+  "name": "js-framework-benchmark-angular-rxa-normal",
   "version": "0.0.0",
   "js-framework-benchmark": {
     "frameworkVersionFromPackage": "@angular/core",
-    "customURL": "/dist/angular-rx-angular-local/"
+    "customURL": "/dist/angular-rxa-normal/"
   },
   "scripts": {
     "ng": "ng",
