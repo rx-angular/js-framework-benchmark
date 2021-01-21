@@ -1,0 +1,1 @@
+{"framework":"angular-rx-angular-normal-vinvalid (no package-lock)-keyed","keyed":true,"benchmark":"02_replace1k","type":"cpu","min":63.447,"max":79.071,"mean":71.0447,"median":71.0395,"geometricMean":70.87780314019237,"standardDeviation":5.1386356609080135,"values":[71.914,72.386,68.999,63.447,79.071,64.152,72.424,78.514,69.375,70.165]}

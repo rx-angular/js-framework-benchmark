@@ -1,0 +1,1 @@
+{"framework":"angular-native-vinvalid (no package-lock)-keyed","keyed":true,"benchmark":"31_startup-ci","type":"startup","min":2819.03,"max":2901.395,"mean":2853.11,"median":2846.0075,"geometricMean":2852.941288743389,"standardDeviation":35.89818820869182,"values":[2901.395,2834.34,2857.675,2819.03]}

@@ -1,0 +1,1 @@
+{"framework":"vanillajs-non-keyed","keyed":false,"benchmark":"32_startup-bt","type":"startup","min":16,"max":16,"mean":16,"median":16,"geometricMean":16,"standardDeviation":0,"values":[16,16,16,16]}

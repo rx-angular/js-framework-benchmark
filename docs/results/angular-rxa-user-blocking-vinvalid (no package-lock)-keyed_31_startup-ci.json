@@ -1,0 +1,1 @@
+{"framework":"angular-rxa-user-blocking-vinvalid (no package-lock)-keyed","keyed":true,"benchmark":"31_startup-ci","type":"startup","min":3129.51,"max":3274.5549999999994,"mean":3177.4375,"median":3152.8424999999997,"geometricMean":3176.9075089671205,"standardDeviation":67.3814495366984,"values":[3274.5549999999994,3171.31,3129.51,3134.3749999999995]}

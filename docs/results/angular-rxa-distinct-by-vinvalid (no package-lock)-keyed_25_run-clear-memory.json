@@ -1,0 +1,1 @@
+{"framework":"angular-rxa-distinct-by-vinvalid (no package-lock)-keyed","keyed":true,"benchmark":"25_run-clear-memory","type":"memory","min":4.565761566162109,"max":4.565761566162109,"mean":4.565761566162109,"median":4.565761566162109,"geometricMean":4.565761566162109,"standardDeviation":null,"values":[4.565761566162109]}

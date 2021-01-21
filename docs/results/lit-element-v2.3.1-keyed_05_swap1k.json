@@ -1,0 +1,1 @@
+{"framework":"lit-element-v2.3.1-keyed","keyed":true,"benchmark":"05_swap1k","type":"cpu","min":109.702,"max":185.497,"mean":138.8241,"median":134.07049999999998,"geometricMean":137.02625459171912,"standardDeviation":24.432858837821026,"values":[134.843,123.182,133.298,185.497,137.986,118.727,174.582,148.362,122.062,109.702]}

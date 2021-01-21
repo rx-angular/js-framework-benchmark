@@ -1,0 +1,1 @@
+{"framework":"angular-rxa-native-v11.0.9-keyed","keyed":true,"benchmark":"32_startup-bt","type":"startup","min":255.94800000000004,"max":315.8039999999999,"mean":277.221,"median":268.56600000000003,"geometricMean":276.2626040070617,"standardDeviation":27.19176235553697,"values":[315.8039999999999,260.592,255.94800000000004,276.5400000000001]}

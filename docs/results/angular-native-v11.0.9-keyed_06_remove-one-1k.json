@@ -1,0 +1,1 @@
+{"framework":"angular-native-v11.0.9-keyed","keyed":true,"benchmark":"06_remove-one-1k","type":"cpu","min":48.447,"max":92.914,"mean":60.1151,"median":57.0105,"geometricMean":59.10294272698703,"standardDeviation":12.822295378233441,"values":[92.914,54.76,58.107,48.447,58.276,69.639,53.814,58.023,55.998,51.173]}

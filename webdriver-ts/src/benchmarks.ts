@@ -446,11 +446,11 @@ export let benchmarks : Array<Benchmark> = [
     benchRunBig,
     benchAppendToManyRows,
     benchClear,
-    benchReadyMemory,
-    benchRunMemory,
-    benchUpdate5Memory,
-    benchReplace5Memory,
-    benchCreateClear5Memory,
+  //  benchReadyMemory,
+  //  benchRunMemory,
+  //  benchUpdate5Memory,
+  //  benchReplace5Memory,
+  //  benchCreateClear5Memory,
     benchStartup,
 ];
 

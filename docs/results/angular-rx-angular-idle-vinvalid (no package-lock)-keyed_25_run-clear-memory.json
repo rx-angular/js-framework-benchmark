@@ -1,0 +1,1 @@
+{"framework":"angular-rx-angular-idle-vinvalid (no package-lock)-keyed","keyed":true,"benchmark":"25_run-clear-memory","type":"memory","min":4.826549530029297,"max":4.826549530029297,"mean":4.826549530029297,"median":4.826549530029297,"geometricMean":4.826549530029297,"standardDeviation":null,"values":[4.826549530029297]}

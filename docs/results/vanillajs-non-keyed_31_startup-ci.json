@@ -1,0 +1,1 @@
+{"framework":"vanillajs-non-keyed","keyed":false,"benchmark":"31_startup-ci","type":"startup","min":1957.0249999999999,"max":1958.265,"mean":1957.5237499999998,"median":1957.4025,"geometricMean":1957.523690834957,"standardDeviation":0.5557633639120152,"values":[1957.1799999999998,1957.0249999999999,1957.625,1958.265]}

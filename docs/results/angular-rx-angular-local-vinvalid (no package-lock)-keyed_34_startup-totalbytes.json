@@ -1,0 +1,1 @@
+{"framework":"angular-rx-angular-local-vinvalid (no package-lock)-keyed","keyed":true,"benchmark":"34_startup-totalbytes","type":"startup","min":312.0458984375,"max":312.0458984375,"mean":312.0458984375,"median":312.0458984375,"geometricMean":312.0458984375,"standardDeviation":0,"values":[312.0458984375,312.0458984375,312.0458984375,312.0458984375]}

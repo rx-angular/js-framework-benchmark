@@ -1,0 +1,1 @@
+{"framework":"vanillajs-non-keyed","keyed":false,"benchmark":"04_select1k","type":"cpu","min":123.489,"max":395.059,"mean":222.1116,"median":172.84550000000002,"geometricMean":205.63837783079182,"standardDeviation":95.57211724044949,"values":[357.061,395.059,251.741,162.038,183.243,123.489,161.89,138.005,286.142,162.448]}
