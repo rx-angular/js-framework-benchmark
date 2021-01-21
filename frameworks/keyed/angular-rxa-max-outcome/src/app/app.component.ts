@@ -111,7 +111,7 @@ export class AppComponent {
     }
 
     distinctById(item1: Data, item2: Data) {
-        return item1.label === item2.label;
+        return item1.label !== item2.label;
     }
 
     select(item: Data, event: Event) {

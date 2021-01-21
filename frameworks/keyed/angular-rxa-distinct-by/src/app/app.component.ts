@@ -13,7 +13,7 @@ interface Data {
             <div class="jumbotron">
                 <div class="row">
                     <div class="col-md-6">
-                        <h1>Angular {{version}} keyed</h1>
+                        <h1>Angular {{version}} keyed (distinctBy)</h1>
                     </div>
                     <div class="col-md-6">
                         <div class="col-sm-6 smallpad">
@@ -111,7 +111,7 @@ export class AppComponent {
     }
 
     distinctById(item1: Data, item2: Data) {
-        return item1.label === item2.label;
+        return item1.label !== item2.label;
     }
 
     select(item: Data, event: Event) {

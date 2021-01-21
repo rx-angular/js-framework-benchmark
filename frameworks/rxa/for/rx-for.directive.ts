@@ -101,7 +101,8 @@ export class RxFor<T, U extends NgIterable<T> = NgIterable<T>>
     values$ = this.observables$.pipe(map(o => isObservable(o) ? o : of(o)),
         distinctUntilChanged(),
         switchAll(),
-        distinctUntilChanged());
+       // distinctUntilChanged()
+    );
 
     strategy$ = this.strategyInput$.pipe(map(o => isObservable(o) ? o : of(o)),
         distinctUntilChanged(),
@@ -142,8 +143,7 @@ export class RxFor<T, U extends NgIterable<T> = NgIterable<T>>
     }
 
     ngOnDestroy() {
-        this.viewContainerRef.clear();
-        console.log('onDestroy');
+
     }
 }
 
