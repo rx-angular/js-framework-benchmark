@@ -1,9 +1,9 @@
 {
-  "name": "js-framework-benchmark-rx-angular-user-blocking",
+  "name": "js-framework-benchmark-rxa-user-blocking",
   "version": "0.0.0",
   "js-framework-benchmark": {
     "frameworkVersionFromPackage": "@angular/core",
-    "customURL": "/dist/angular-rx-angular-user-blocking/"
+    "customURL": "/dist/angular-rxa-user-blocking/"
   },
   "scripts": {
     "ng": "ng",

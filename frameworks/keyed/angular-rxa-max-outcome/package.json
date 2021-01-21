@@ -1,5 +1,5 @@
 {
-  "name": "js-framework-benchmark-rx-angular-max-outcome",
+  "name": "js-framework-benchmark-rxa-max-outcome",
   "version": "0.0.0",
   "js-framework-benchmark": {
     "frameworkVersionFromPackage": "@angular/core",

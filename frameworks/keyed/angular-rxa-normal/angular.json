@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-rx-angular-normal": {
+    "angular-rxa-normal": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-rx-angular-normal",
+            "outputPath": "dist/angular-rxa-normal",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,24 +63,24 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-rx-angular-normal:build"
+            "browserTarget": "angular-rxa-normal:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-rx-angular-normal:build:production"
+              "browserTarget": "angular-rxa-normal:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-rx-angular-normal:build"
+            "browserTarget": "angular-rxa-normal:build"
           }
         }
       }
     }
   },
-  "defaultProject": "angular-rx-angular-normal",
+  "defaultProject": "angular-rxa-normal",
   "cli": {
     "analytics": false
   }

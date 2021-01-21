@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-rx-angular-native": {
+    "angular-rxa-native": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-rx-angular-native",
+            "outputPath": "dist/angular-rxa-native",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,24 +63,24 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-rx-angular-native:build"
+            "browserTarget": "angular-rxa-native:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-rx-angular-native:build:production"
+              "browserTarget": "angular-rxa-native:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-rx-angular-native:build"
+            "browserTarget": "angular-rxa-native:build"
           }
         }
       }
     }
   },
-  "defaultProject": "angular-rx-angular-native",
+  "defaultProject": "angular-rxa-native",
   "cli": {
     "analytics": false
   }
