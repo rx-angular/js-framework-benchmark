@@ -143,7 +143,8 @@ export class RxFor<T, U extends NgIterable<T> = NgIterable<T>>
     }
 
     ngOnDestroy() {
-
+        this.viewContainerRef.clear();
+        console.log('onDestroy');
     }
 }
 
