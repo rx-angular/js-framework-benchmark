@@ -16,9 +16,7 @@
   },
   "private": true,
   "dependencies": {
-
+    "@angular/core": "11.0.9"
   },
-  "devDependencies": {
-
-  }
+  "devDependencies": {}
 }

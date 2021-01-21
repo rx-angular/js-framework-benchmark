@@ -1,0 +1,22 @@
+{
+  "name": "js-framework-benchmark-rx-angular-distinct-by",
+  "version": "0.0.0",
+  "js-framework-benchmark": {
+    "frameworkVersionFromPackage": "@angular/core",
+    "customURL": "/dist/angular-rx-distinct-by/"
+  },
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "build-prod": "ng build --prod=true --buildOptimizer=true --sourceMap=false",
+    "build-dev": "ng serve"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/core": "11.0.9"
+  },
+  "devDependencies": {}
+}

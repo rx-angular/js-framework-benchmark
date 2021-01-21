@@ -1,5 +1,7 @@
 import {Component, VERSION} from '@angular/core';
-import {BehaviorSubject} from "rxjs";
+import { AfterViewChecked} from '@angular/core';
+import { ɵmarkDirty } from '@angular/core';
+import { ɵdetectChanges } from '@angular/core';
 
 interface Data {
     id: number;
@@ -13,50 +15,38 @@ interface Data {
             <div class="jumbotron">
                 <div class="row">
                     <div class="col-md-6">
-                        <h1>Angular {{version}} keyed (no Zone.js)</h1>
+                        <h1>Angular {{version}} no zone.js</h1>
                     </div>
                     <div class="col-md-6">
                         <div class="col-sm-6 smallpad">
-                            <button type="button" class="btn btn-primary btn-block" id="run" unpatch (click)="run()" ref="text">
-                                Create 1,000 rows
-                            </button>
+                            <button type="button" class="btn btn-primary btn-block" id="run" (click)="run()" ref="text">Create 1,000 rows</button>
                         </div>
                         <div class="col-sm-6 smallpad">
-                            <button type="button" class="btn btn-primary btn-block" id="runlots" unpatch (click)="runLots()">
-                                Create 10,000 rows
-                            </button>
+                            <button type="button" class="btn btn-primary btn-block" id="runlots" (click)="runLots()">Create 10,000 rows</button>
                         </div>
                         <div class="col-sm-6 smallpad">
-                            <button type="button" class="btn btn-primary btn-block" id="add" unpatch (click)="add()" ref="text">
-                                Append 1,000 rows
-                            </button>
+                            <button type="button" class="btn btn-primary btn-block" id="add" (click)="add()" ref="text">Append 1,000 rows</button>
                         </div>
                         <div class="col-sm-6 smallpad">
-                            <button type="button" class="btn btn-primary btn-block" id="update" unpatch (click)="update()">
-                                Update every 10th row
-                            </button>
+                            <button type="button" class="btn btn-primary btn-block" id="update" (click)="update()">Update every 10th row</button>
                         </div>
                         <div class="col-sm-6 smallpad">
-                            <button type="button" class="btn btn-primary btn-block" id="clear" unpatch (click)="clear()">Clear
-                            </button>
+                            <button type="button" class="btn btn-primary btn-block" id="clear" (click)="clear()">Clear</button>
                         </div>
                         <div class="col-sm-6 smallpad">
-                            <button type="button" class="btn btn-primary btn-block" id="swaprows" unpatch (click)="swapRows()">
-                                Swap Rows
-                            </button>
+                            <button type="button" class="btn btn-primary btn-block" id="swaprows" (click)="swapRows()">Swap Rows</button>
                         </div>
                     </div>
                 </div>
             </div>
             <table class="table table-hover table-striped test-data">
                 <tbody>
-                <tr [class.danger]="item.id === selected" *rxFor="let item of data$; trackBy: itemById">
+                <tr [class.danger]="item.id === selected" *ngFor="let item of data; trackBy: itemById">
                     <td class="col-md-1">{{item.id}}</td>
                     <td class="col-md-4">
                         <a href="#" (click)="select(item, $event)">{{item.label}}</a>
                     </td>
-                    <td class="col-md-1"><a href="#" (click)="delete(item, $event)"><span
-                            class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+                    <td class="col-md-1"><a href="#" (click)="delete(item, $event)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
                     <td class="col-md-6"></td>
                 </tr>
                 </tbody>
@@ -67,8 +57,7 @@ interface Data {
     styles: []
 })
 export class AppComponent {
-    data$ = new BehaviorSubject<Array<Data>>([]);
-
+    data: Array<Data> = [];
     selected: number = undefined;
     id: number = 1;
     backup: Array<Data> = undefined;
@@ -84,10 +73,7 @@ export class AppComponent {
         var nouns = ["table", "chair", "house", "bbq", "desk", "car", "pony", "cookie", "sandwich", "burger", "pizza", "mouse", "keyboard"];
         var data: Array<Data> = [];
         for (var i = 0; i < count; i++) {
-            data.push({
-                id: this.id,
-                label: adjectives[this._random(adjectives.length)] + " " + colours[this._random(colours.length)] + " " + nouns[this._random(nouns.length)]
-            });
+            data.push({ id: this.id, label: adjectives[this._random(adjectives.length)] + " " + colours[this._random(colours.length)] + " " + nouns[this._random(nouns.length)] });
             this.id++;
         }
         return data;
@@ -104,53 +90,56 @@ export class AppComponent {
     select(item: Data, event: Event) {
         event.preventDefault();
         this.selected = item.id;
+        ɵmarkDirty(this);
     }
 
     delete(item: Data, event: Event) {
         event.preventDefault();
-        const data = this.data$.getValue();
-        for (let i = 0, l = data.length; i < l; i++) {
-            if (data[i].id === item.id) {
-                data.splice(i, 1);
+        for (let i = 0, l = this.data.length; i < l; i++) {
+            if (this.data[i].id === item.id) {
+                this.data.splice(i, 1);
                 break;
             }
         }
-        this.data$.next(data);
+        ɵmarkDirty(this);
     }
 
     run() {
-        this.data$.next(this.buildData());
+        this.data = this.buildData();
+        ɵmarkDirty(this);
     }
 
     add() {
-        this.data$.next(this.data$.getValue().concat(this.buildData(1000)));
+        this.data = this.data.concat(this.buildData(1000));
+        ɵmarkDirty(this);
     }
 
     update() {
-        const data = this.data$.getValue();
-        for (let i = 0; i < data.length; i += 10) {
-            data[i].label += ' !!!';
+        for (let i = 0; i < this.data.length; i += 10) {
+            this.data[i].label += ' !!!';
         }
-        this.data$.next(data);
+        ɵmarkDirty(this);
     }
 
     runLots() {
-        this.data$.next(this.buildData(10000));
+        this.data = this.buildData(10000);
         this.selected = undefined;
+        ɵmarkDirty(this);
     }
 
     clear() {
-        this.data$.next([]);
+        this.data = [];
         this.selected = undefined;
+        ɵmarkDirty(this);
     }
 
     swapRows() {
-        const data = this.data$.getValue();
-        if (data.length > 998) {
-            var a = data[1];
-            data[1] = data[998];
-            data[998] = a;
+        if (this.data.length > 998) {
+            var a = this.data[1];
+            this.data[1] = this.data[998];
+            this.data[998] = a;
         }
-        this.data$.next(data);
+        ɵmarkDirty(this);
     }
+
 }

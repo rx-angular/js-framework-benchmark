@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-angular-noopzone": {
+    "angular-noopzone": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-angular-noopzone",
+            "outputPath": "dist/angular-noopzone",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,24 +63,24 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-angular-noopzone:build"
+            "browserTarget": "angular-noopzone:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-angular-noopzone:build:production"
+              "browserTarget": "angular-noopzone:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-angular-noopzone:build"
+            "browserTarget": "angular-noopzone:build"
           }
         }
       }
     }
   },
-  "defaultProject": "angular-angular-noopzone",
+  "defaultProject": "angular-noopzone",
   "cli": {
     "analytics": false
   }

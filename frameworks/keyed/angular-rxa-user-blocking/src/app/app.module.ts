@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import {RxForModule, UnpatchEventsModule, RX_PRIMARY_STRATEGY} from "@rx-angular";
 
 
-
 @NgModule({
   declarations: [
     AppComponent
@@ -18,7 +17,7 @@ import {RxForModule, UnpatchEventsModule, RX_PRIMARY_STRATEGY} from "@rx-angular
   providers: [
     {
       provide: RX_PRIMARY_STRATEGY,
-      useValue: 'idle'
+      useValue: 'user-blocking'
     }
   ],
   bootstrap: [AppComponent]
