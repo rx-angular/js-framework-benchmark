@@ -101,6 +101,7 @@ export class RxFor<T, U extends NgIterable<T> = NgIterable<T>>
     values$ = this.observables$.pipe(map(o => isObservable(o) ? o : of(o)),
         distinctUntilChanged(),
         switchAll(),
+       // @NOTICE the test is mutating the array
        // distinctUntilChanged()
     );
 
