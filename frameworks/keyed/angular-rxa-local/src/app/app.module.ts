@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {RxForModule, UnpatchEventsModule} from "@rx-angular";
+import {RX_PRIMARY_STRATEGY, RxForModule, UnpatchEventsModule} from "@rx-angular";
 
 @NgModule({
   declarations: [
@@ -13,7 +13,12 @@ import {RxForModule, UnpatchEventsModule} from "@rx-angular";
       RxForModule,
       UnpatchEventsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: RX_PRIMARY_STRATEGY,
+      useValue: 'idle'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
