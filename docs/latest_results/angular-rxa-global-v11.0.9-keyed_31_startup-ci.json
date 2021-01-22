@@ -1,0 +1,1 @@
+{"framework":"angular-rxa-global-v11.0.9-keyed","keyed":true,"benchmark":"31_startup-ci","type":"startup","min":3150.925,"max":3234.1,"mean":3184.77625,"median":3177.04,"geometricMean":3184.602902089608,"standardDeviation":38.42563106725334,"values":[3234.1,3157.9199999999996,3196.16,3150.925]}

@@ -1,0 +1,1 @@
+{"framework":"angular-rxa-user-blocking-v11.0.9-keyed","keyed":true,"benchmark":"31_startup-ci","type":"startup","min":3145.17,"max":3285.96,"mean":3190.70875,"median":3165.8525,"geometricMean":3190.228519381229,"standardDeviation":64.31414105454053,"values":[3285.96,3169.505,3162.2,3145.17]}

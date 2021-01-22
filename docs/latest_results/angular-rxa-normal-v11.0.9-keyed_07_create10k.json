@@ -1,0 +1,1 @@
+{"framework":"angular-rxa-normal-v11.0.9-keyed","keyed":true,"benchmark":"07_create10k","type":"cpu","min":4821.193,"max":5566.869,"mean":5242.222899999999,"median":5271.5419999999995,"geometricMean":5235.8699332982,"standardDeviation":270.416616207268,"values":[5469.285,5511.572,5143.644,5443.737,4821.193,4879.257,5043.588,5152.98,5566.869,5390.104]}

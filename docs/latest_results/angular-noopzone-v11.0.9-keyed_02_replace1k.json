@@ -1,0 +1,1 @@
+{"framework":"angular-noopzone-v11.0.9-keyed","keyed":true,"benchmark":"02_replace1k","type":"cpu","min":183.625,"max":317.426,"mean":222.68959999999998,"median":203.3255,"geometricMean":219.53394599956587,"standardDeviation":42.014791768825624,"values":[317.426,244.385,221.444,266.618,196.172,196.283,199.627,194.292,207.024,183.625]}

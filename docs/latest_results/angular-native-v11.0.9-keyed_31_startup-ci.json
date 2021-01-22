@@ -1,0 +1,1 @@
+{"framework":"angular-native-v11.0.9-keyed","keyed":true,"benchmark":"31_startup-ci","type":"startup","min":2804.785,"max":3007.885,"mean":2862.6675,"median":2818.9999999999995,"geometricMean":2861.4601356917046,"standardDeviation":97.05311161936054,"values":[3007.885,2820.6899999999996,2817.3099999999995,2804.785]}

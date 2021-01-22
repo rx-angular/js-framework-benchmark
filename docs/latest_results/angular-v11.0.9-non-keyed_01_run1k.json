@@ -1,0 +1,1 @@
+{"framework":"angular-v11.0.9-non-keyed","keyed":false,"benchmark":"01_run1k","type":"cpu","min":237.009,"max":331.559,"mean":294.4919,"median":292.58950000000004,"geometricMean":293.117811825188,"standardDeviation":29.42618884391552,"values":[237.009,280.536,302.97,326.985,309.96,321.301,331.559,282.209,273.55,278.84]}

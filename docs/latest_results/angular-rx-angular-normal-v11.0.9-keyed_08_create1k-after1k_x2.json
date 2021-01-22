@@ -1,0 +1,1 @@
+{"framework":"angular-rx-angular-normal-v11.0.9-keyed","keyed":true,"benchmark":"08_create1k-after1k_x2","type":"cpu","min":1110.765,"max":1510.086,"mean":1319.8546000000001,"median":1317.3915000000002,"geometricMean":1313.0555536032082,"standardDeviation":140.02488667154054,"values":[1244.975,1510.086,1464.858,1126.803,1386.439,1110.765,1293.313,1250.742,1469.095,1341.47]}

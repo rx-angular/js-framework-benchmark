@@ -1,0 +1,1 @@
+{"framework":"angular-native-vinvalid (no package-lock)-keyed","keyed":true,"benchmark":"05_swap1k","type":"cpu","min":1514.779,"max":2260.095,"mean":1878.3334,"median":1897.0605,"geometricMean":1863.99184232951,"standardDeviation":243.5495212181703,"values":[1623.015,1692.227,1514.779,1701.031,1803.782,2062.114,1990.339,2088.8,2260.095,2047.152]}

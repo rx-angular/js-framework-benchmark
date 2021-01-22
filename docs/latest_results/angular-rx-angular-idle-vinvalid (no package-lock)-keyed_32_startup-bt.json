@@ -1,0 +1,1 @@
+{"framework":"angular-rx-angular-idle-vinvalid (no package-lock)-keyed","keyed":true,"benchmark":"32_startup-bt","type":"startup","min":211.96400000000006,"max":256.45200000000006,"mean":229.26300000000003,"median":224.318,"geometricMean":228.5907714491624,"standardDeviation":20.524354411284182,"values":[233.70800000000003,214.928,211.96400000000006,256.45200000000006]}

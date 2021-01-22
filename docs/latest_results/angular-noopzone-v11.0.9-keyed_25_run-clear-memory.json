@@ -1,0 +1,1 @@
+{"framework":"angular-noopzone-v11.0.9-keyed","keyed":true,"benchmark":"25_run-clear-memory","type":"memory","min":3.0465431213378906,"max":3.0465431213378906,"mean":3.0465431213378906,"median":3.0465431213378906,"geometricMean":3.0465431213378906,"standardDeviation":null,"values":[3.0465431213378906]}

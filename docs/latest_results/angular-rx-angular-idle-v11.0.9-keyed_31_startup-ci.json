@@ -1,0 +1,1 @@
+{"framework":"angular-rx-angular-idle-v11.0.9-keyed","keyed":true,"benchmark":"31_startup-ci","type":"startup","min":3171.2450000000003,"max":3255,"mean":3202.2575,"median":3191.3925,"geometricMean":3202.0964727354926,"standardDeviation":37.18218984496018,"values":[3255,3171.2450000000003,3200.5549999999994,3182.23]}

@@ -1,9 +1,9 @@
 {
-  "name": "js-framework-benchmark-rxa-user-blocking",
+  "name": "js-framework-benchmark-rxa-no-priority",
   "version": "0.0.0",
   "js-framework-benchmark": {
     "frameworkVersionFromPackage": "@angular/core",
-    "customURL": "/dist/angular-rxa-user-blocking/"
+    "customURL": "/dist/angular-rxa-no-priority/"
   },
   "scripts": {
     "ng": "ng",

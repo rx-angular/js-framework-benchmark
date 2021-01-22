@@ -1,0 +1,1 @@
+{"framework":"angular-rxa-idle-v11.0.9-keyed","keyed":true,"benchmark":"06_remove-one-1k","type":"cpu","min":57.489,"max":106.659,"mean":78.02600000000001,"median":76.95,"geometricMean":77.03340353413131,"standardDeviation":13.43636649792892,"values":[57.489,69.152,106.659,91.46,67.491,75.757,77.992,77.159,80.36,76.741]}

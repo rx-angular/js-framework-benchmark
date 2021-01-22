@@ -1,0 +1,1 @@
+{"framework":"angular-noopzone-v11.0.9-keyed","keyed":true,"benchmark":"31_startup-ci","type":"startup","min":2580.4799999999996,"max":2598.92,"mean":2588.1499999999996,"median":2586.6,"geometricMean":2588.139562778599,"standardDeviation":8.490457388543373,"values":[2582.3199999999997,2580.4799999999996,2590.88,2598.92]}

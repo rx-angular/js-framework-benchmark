@@ -1,0 +1,1 @@
+{"framework":"angular-rxa-no-priority-vinvalid (no package-lock)-keyed","keyed":true,"benchmark":"31_startup-ci","type":"startup","min":3117.405,"max":3158.6800000000003,"mean":3137.1312500000004,"median":3136.22,"geometricMean":3137.089724569564,"standardDeviation":18.64170162789151,"values":[3126.54,3117.405,3145.8999999999996,3158.6800000000003]}
