@@ -12,8 +12,8 @@ import {RxForModule, UnpatchEventsModule, RX_PRIMARY_STRATEGY} from "@rx-angular
   ],
   imports: [
     BrowserModule,
-      RxForModule,
-      UnpatchEventsModule
+    UnpatchEventsModule,
+      RxForModule
   ],
   providers: [
     {

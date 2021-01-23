@@ -1,4 +1,4 @@
-import {Component, VERSION} from '@angular/core';
+import { ChangeDetectorRef, Component, VERSION } from '@angular/core';
 import {BehaviorSubject} from "rxjs";
 
 interface Data {
@@ -54,15 +54,18 @@ interface Data {
                     </div>
                 </div>
             </div>
+            {{ rendered() }}
             <table class="table table-hover table-striped test-data">
                 <tbody>
                 <tr [class.danger]="item.id === selected"
-                    *rxFor="let item of data$; 
-                trackBy: itemById; 
+                    *rxFor="let item of data$;
+                trackBy: itemById;
+                parent: true;
                 distinctBy: distinctById">
                     <td class="col-md-1">{{item.id}}</td>
                     <td class="col-md-4">
-                        <a href="#" (click)="select(item, $event)">{{item.label}}</a>
+                        <a href="#"
+                           (click)="select(item, $event)">{{item.label}}</a>
                     </td>
                     <td class="col-md-1"><a href="#" (click)="delete(item, $event)"><span
                             class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
@@ -82,9 +85,17 @@ export class AppComponent {
     id: number = 1;
     backup: Array<Data> = undefined;
     version: string;
+    
+    _renderCount = 0;
 
-    constructor() {
+    constructor(
+        private cdRef: ChangeDetectorRef
+    ) {
         this.version = VERSION.full;
+    }
+    
+    rendered() {
+        return ++this._renderCount;
     }
 
     buildData(count: number = 1000): Array<Data> {
@@ -111,12 +122,14 @@ export class AppComponent {
     }
 
     distinctById(item1: Data, item2: Data) {
-        return item1.label !== item2.label;
+        return item1.label === item2.label;
     }
 
     select(item: Data, event: Event) {
+        console.log(item, event)
         event.preventDefault();
         this.selected = item.id;
+        // this.cdRef.detectChanges();
     }
 
     delete(item: Data, event: Event) {

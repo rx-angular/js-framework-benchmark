@@ -21,7 +21,8 @@ import {
   TemplateRef,
   TrackByFunction, Type,
   ViewContainerRef,
-  ɵdetectChanges as detectChanges
+  ɵdetectChanges as detectChanges,
+  ɵmarkDirty as markDiry
 } from '@angular/core';
 import {delay, filter, map, startWith, switchMap, withLatestFrom,} from 'rxjs/operators';
 
@@ -303,7 +304,7 @@ export function createListManager<T, C extends any>(config: {
 
         return (o$: Observable<NgIterable<T>>): Observable<any> =>
             o$.pipe(
-                map((items) => (items ? Array.from(items) : [])),
+                map((items) => (Array.isArray(items) ? items : Array.from(items))),
                 withLatestFrom(strategy$),
                 switchMap(([items, strategy]) => {
                     const viewLength = viewContainerRef.length;
@@ -353,7 +354,7 @@ export function createListManager<T, C extends any>(config: {
                                         const moved = trackById !== currentId;
                                         if (moved) {
                                             const oldPosition = positions.get(item);
-                                            if (
+                                          /*  if (
                                                 positions.has(item) &&
                                                 positions.get(item) !== index
                                             ) {
@@ -363,7 +364,7 @@ export function createListManager<T, C extends any>(config: {
                                                 if (oldView) {
                                                     view = moveView(oldView, index);
                                                 }
-                                            }
+                                            }*/
                                             updateViewContext(view, context, item);
                                             doWork = true;
                                         } else {
@@ -375,13 +376,15 @@ export function createListManager<T, C extends any>(config: {
                                             } else if (insertedOrRemoved) {
                                                 // @ts-ignore
                                               view.context.setComputedContext(context);
+                                                doWork = true;
                                             }
                                         }
                                     }
                                     if (doWork) {
-                                        view.reattach();
+                                        // markDiry(view);
+                                        // view.reattach();
                                         view.detectChanges();
-                                        view.detach();
+                                        // view.detach();
                                     }
                                 }, {})
                             );

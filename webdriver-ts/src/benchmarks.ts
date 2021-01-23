@@ -440,7 +440,7 @@ export let benchmarks : Array<Benchmark> = [
     benchRun,
     benchReplaceAll,
     benchUpdate,
-    benchSelect,
+    // benchSelect,
     benchSwapRows,
     benchRemove,
     benchRunBig,

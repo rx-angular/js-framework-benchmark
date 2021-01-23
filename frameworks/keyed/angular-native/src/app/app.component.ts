@@ -58,9 +58,15 @@ export class AppComponent {
     id: number = 1;
     backup: Array<Data> = undefined;
     version: string;
-
+    
+    _renderCount = 0;
+    
     constructor() {
         this.version = VERSION.full;
+    }
+    
+    rendered() {
+        return ++this._renderCount;
     }
 
     buildData(count: number = 1000): Array<Data> {
@@ -86,6 +92,7 @@ export class AppComponent {
     select(item: Data, event: Event) {
         event.preventDefault();
         this.selected = item.id;
+        // TODO: does not work
     }
 
     delete(item: Data, event: Event) {
