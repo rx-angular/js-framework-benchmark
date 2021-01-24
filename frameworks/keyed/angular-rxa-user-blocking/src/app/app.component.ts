@@ -1,5 +1,6 @@
 import {Component, VERSION} from '@angular/core';
 import {BehaviorSubject} from "rxjs";
+import {getData$} from "@data";
 
 interface Data {
     id: number;
@@ -67,90 +68,31 @@ interface Data {
     styles: []
 })
 export class AppComponent {
-    data$ = new BehaviorSubject<Array<Data>>([]);
+    model = getData$();
+    data$ = this.model.data$;
 
     selected: number = undefined;
-    id: number = 1;
+
     backup: Array<Data> = undefined;
     version: string;
+
+    buildData = this.model.buildData;
+    delete = this.model.deleteItem;
+    run = this.model.run;
+    add = this.model.add;
+    update = this.model.update;
+    runLots = this.model.runLots;
+    clear = this.model.clear;
+    swapRows = this.model.swapRows;
+    itemById = this.model.itemById;
+    distinctById = this.model.distinctById;
 
     constructor() {
         this.version = VERSION.full;
     }
 
-    buildData(count: number = 1000): Array<Data> {
-        var adjectives = ["pretty", "large", "big", "small", "tall", "short", "long", "handsome", "plain", "quaint", "clean", "elegant", "easy", "angry", "crazy", "helpful", "mushy", "odd", "unsightly", "adorable", "important", "inexpensive", "cheap", "expensive", "fancy"];
-        var colours = ["red", "yellow", "blue", "green", "pink", "brown", "purple", "brown", "white", "black", "orange"];
-        var nouns = ["table", "chair", "house", "bbq", "desk", "car", "pony", "cookie", "sandwich", "burger", "pizza", "mouse", "keyboard"];
-        var data: Array<Data> = [];
-        for (var i = 0; i < count; i++) {
-            data.push({
-                id: this.id,
-                label: adjectives[this._random(adjectives.length)] + " " + colours[this._random(colours.length)] + " " + nouns[this._random(nouns.length)]
-            });
-            this.id++;
-        }
-        return data;
-    }
-
-    _random(max: number) {
-        return Math.round(Math.random() * 1000) % max;
-    }
-
-    itemById(index: number, item: Data) {
-        return item.id;
-    }
-
     select(item: Data, event: Event) {
         event.preventDefault();
         this.selected = item.id;
-    }
-
-    delete(item: Data, event: Event) {
-        event.preventDefault();
-        const data = this.data$.getValue();
-        for (let i = 0, l = data.length; i < l; i++) {
-            if (data[i].id === item.id) {
-                data.splice(i, 1);
-                break;
-            }
-        }
-        this.data$.next(data);
-    }
-
-    run() {
-        this.data$.next(this.buildData());
-    }
-
-    add() {
-        this.data$.next(this.data$.getValue().concat(this.buildData(1000)));
-    }
-
-    update() {
-        const data = this.data$.getValue();
-        for (let i = 0; i < data.length; i += 10) {
-            data[i].label += ' !!!';
-        }
-        this.data$.next(data);
-    }
-
-    runLots() {
-        this.data$.next(this.buildData(10000));
-        this.selected = undefined;
-    }
-
-    clear() {
-        this.data$.next([]);
-        this.selected = undefined;
-    }
-
-    swapRows() {
-        const data = this.data$.getValue();
-        if (data.length > 998) {
-            var a = data[1];
-            data[1] = data[998];
-            data[998] = a;
-        }
-        this.data$.next(data);
     }
 }

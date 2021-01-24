@@ -13,7 +13,7 @@ interface Data {
 export class AppComponent {
     data: Array<Data> = [];
     selected: number = undefined;
-    id: number = 1;
+
     backup: Array<Data> = undefined;
     version: string;
 

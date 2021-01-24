@@ -19,7 +19,8 @@
       "dom"
     ],
     "paths": {
-      "@rx-angular": ["../../rxa/index.ts"]
+      "@rx-angular": ["../../shared/rxa/index.ts"],
+      "@data": ["../../shared/data/index.ts"]
     }
   },
   "angularCompilerOptions": {
