@@ -1,7 +1,6 @@
-import {Component, VERSION} from '@angular/core';
-// import { AfterViewChecked} from '@angular/core';
-import { ɵmarkDirty } from '@angular/core';
-// import { ɵdetectChanges } from '@angular/core';
+import {Component, VERSION, ɵmarkDirty} from '@angular/core';
+import {getData} from "@data";
+
 
 interface Data {
     id: number;
@@ -19,22 +18,33 @@ interface Data {
                     </div>
                     <div class="col-md-6">
                         <div class="col-sm-6 smallpad">
-                            <button type="button" class="btn btn-primary btn-block" id="run" (click)="run()" ref="text">Create 1,000 rows</button>
+                            <button type="button" class="btn btn-primary btn-block" id="run" (click)="run()" ref="text">
+                                Create 1,000 rows
+                            </button>
                         </div>
                         <div class="col-sm-6 smallpad">
-                            <button type="button" class="btn btn-primary btn-block" id="runlots" (click)="runLots()">Create 10,000 rows</button>
+                            <button type="button" class="btn btn-primary btn-block" id="runlots" (click)="runLots()">
+                                Create 10,000 rows
+                            </button>
                         </div>
                         <div class="col-sm-6 smallpad">
-                            <button type="button" class="btn btn-primary btn-block" id="add" (click)="add()" ref="text">Append 1,000 rows</button>
+                            <button type="button" class="btn btn-primary btn-block" id="add" (click)="add()" ref="text">
+                                Append 1,000 rows
+                            </button>
                         </div>
                         <div class="col-sm-6 smallpad">
-                            <button type="button" class="btn btn-primary btn-block" id="update" (click)="update()">Update every 10th row</button>
+                            <button type="button" class="btn btn-primary btn-block" id="update" (click)="update()">
+                                Update every 10th row
+                            </button>
                         </div>
                         <div class="col-sm-6 smallpad">
-                            <button type="button" class="btn btn-primary btn-block" id="clear" (click)="clear()">Clear</button>
+                            <button type="button" class="btn btn-primary btn-block" id="clear" (click)="clear()">Clear
+                            </button>
                         </div>
                         <div class="col-sm-6 smallpad">
-                            <button type="button" class="btn btn-primary btn-block" id="swaprows" (click)="swapRows()">Swap Rows</button>
+                            <button type="button" class="btn btn-primary btn-block" id="swaprows" (click)="swapRows()">
+                                Swap Rows
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -46,7 +56,8 @@ interface Data {
                     <td class="col-md-4">
                         <a href="#" (click)="select(item, $event)">{{item.label}}</a>
                     </td>
-                    <td class="col-md-1"><a href="#" (click)="delete(item, $event)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+                    <td class="col-md-1"><a href="#" (click)="delete(item, $event)"><span
+                            class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
                     <td class="col-md-6"></td>
                 </tr>
                 </tbody>
@@ -57,7 +68,12 @@ interface Data {
     styles: []
 })
 export class AppComponent {
-    data: Array<Data> = [];
+    model = getData();
+
+    get data(): Array<Data>{
+        return this.model.data();
+    }
+
     selected: number = undefined;
     id: number = 1;
     backup: Array<Data> = undefined;
@@ -67,25 +83,7 @@ export class AppComponent {
         this.version = VERSION.full;
     }
 
-    buildData(count: number = 1000): Array<Data> {
-        var adjectives = ["pretty", "large", "big", "small", "tall", "short", "long", "handsome", "plain", "quaint", "clean", "elegant", "easy", "angry", "crazy", "helpful", "mushy", "odd", "unsightly", "adorable", "important", "inexpensive", "cheap", "expensive", "fancy"];
-        var colours = ["red", "yellow", "blue", "green", "pink", "brown", "purple", "brown", "white", "black", "orange"];
-        var nouns = ["table", "chair", "house", "bbq", "desk", "car", "pony", "cookie", "sandwich", "burger", "pizza", "mouse", "keyboard"];
-        var data: Array<Data> = [];
-        for (var i = 0; i < count; i++) {
-            data.push({ id: this.id, label: adjectives[this._random(adjectives.length)] + " " + colours[this._random(colours.length)] + " " + nouns[this._random(nouns.length)] });
-            this.id++;
-        }
-        return data;
-    }
-
-    _random(max: number) {
-        return Math.round(Math.random() * 1000) % max;
-    }
-
-    itemById(index: number, item: Data) {
-        return item.id;
-    }
+    itemById = this.model.itemById;
 
     select(item: Data, event: Event) {
         event.preventDefault();
@@ -94,51 +92,40 @@ export class AppComponent {
     }
 
     delete(item: Data, event: Event) {
-        event.preventDefault();
-        for (let i = 0, l = this.data.length; i < l; i++) {
-            if (this.data[i].id === item.id) {
-                this.data.splice(i, 1);
-                break;
-            }
-        }
+        this.model.deleteItem(item, event);
         ɵmarkDirty(this);
     }
 
     run() {
-        this.data = this.buildData();
+        this.model.run();
+        console.log(this.model.data.length, this.data.length);
         ɵmarkDirty(this);
     }
 
     add() {
-        this.data = this.data.concat(this.buildData(1000));
+        this.model.add();
         ɵmarkDirty(this);
     }
 
     update() {
-        for (let i = 0; i < this.data.length; i += 10) {
-            this.data[i].label += ' !!!';
-        }
+        this.model.update();
         ɵmarkDirty(this);
     }
 
     runLots() {
-        this.data = this.buildData(10000);
+        this.model.runLots();
         this.selected = undefined;
         ɵmarkDirty(this);
     }
 
     clear() {
-        this.data = [];
+        this.model.clear();
         this.selected = undefined;
         ɵmarkDirty(this);
     }
 
     swapRows() {
-        if (this.data.length > 998) {
-            var a = this.data[1];
-            this.data[1] = this.data[998];
-            this.data[998] = a;
-        }
+        this.model.swapRows();
         ɵmarkDirty(this);
     }
 

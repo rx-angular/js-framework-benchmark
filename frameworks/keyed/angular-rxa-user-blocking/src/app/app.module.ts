@@ -17,7 +17,7 @@ import {RxForModule, UnpatchEventsModule, RX_PRIMARY_STRATEGY} from "@rx-angular
   providers: [
     {
       provide: RX_PRIMARY_STRATEGY,
-      useValue: 'user-blocking'
+      useValue: 'userBlocking'
     }
   ],
   bootstrap: [AppComponent]

@@ -54,14 +54,14 @@ interface Data {
                     </div>
                 </div>
             </div>
-            {{ rendered() }}
+
             <table class="table table-hover table-striped test-data">
                 <tbody>
                 <tr [class.danger]="item.id === selected"
                     *rxFor="let item of data$;
-                trackBy: itemById;
                 parent: true;
-                distinctBy: distinctById">
+                trackBy: itemById;
+                ">
                     <td class="col-md-1">{{item.id}}</td>
                     <td class="col-md-4">
                         <a href="#"

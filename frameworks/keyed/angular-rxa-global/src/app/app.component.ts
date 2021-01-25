@@ -76,7 +76,6 @@ export class AppComponent {
     backup: Array<Data> = undefined;
     version: string;
 
-    buildData = this.model.buildData;
     delete = this.model.deleteItem;
     run = this.model.run;
     add = this.model.add;

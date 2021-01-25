@@ -1,5 +1,4 @@
 import {Component, VERSION} from '@angular/core';
-import {BehaviorSubject} from "rxjs";
 import {getData$} from "@data";
 
 interface Data {

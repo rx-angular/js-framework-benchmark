@@ -443,7 +443,7 @@ export let benchmarks : Array<Benchmark> = [
     // benchSelect,
     benchSwapRows,
     benchRemove,
-    benchRunBig,
+   // benchRunBig,
     benchAppendToManyRows,
     benchClear,
   //  benchReadyMemory,

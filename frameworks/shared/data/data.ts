@@ -3,12 +3,12 @@ import {Data} from "./model";
 
 export interface DataService {
     data$?: BehaviorSubject<Array<Data>>,
-    data?: Array<Data>,
+    data?: () => Array<Data>,
     run: () => void,
     buildData: () => Array<Data>,
     add: () => void,
     update: () => void,
-    deleteItem: (item:Data, event:Event) => void,
+    deleteItem: (item: Data, event: Event) => void,
     runLots: () => void,
     clear: () => void,
     swapRows: () => void,
@@ -16,7 +16,7 @@ export interface DataService {
     distinctById: (item1: Data, item2: Data) => boolean;
 }
 
-export function getData$(): DataService {
+export function getData$(): Omit<DataService, 'data'> & Pick<DataService, 'data$'> {
 
     let id: number = 1;
     const data$ = new BehaviorSubject<Array<Data>>([]);
@@ -62,7 +62,7 @@ export function getData$(): DataService {
         return Math.round(Math.random() * 1000) % max;
     }
 
-    function deleteItem(item:Data, event:Event) {
+    function deleteItem(item: Data, event: Event) {
         event.preventDefault();
         const data = data$.getValue();
         for (let i = 0, l = data.length; i < l; i++) {
@@ -85,19 +85,21 @@ export function getData$(): DataService {
     function update() {
         const data = data$.getValue();
         for (let i = 0; i < data.length; i += 10) {
-            data[i].label += ' !!!';
+            // Original implementation
+            // data[i].label += ' !!!';
+            data[i] = {...data[i], label:  data[i].label + ' !!!'};
         }
         data$.next(data);
     }
 
     function runLots() {
         data$.next(buildData(10000));
-       // selected = undefined;
+        // selected = undefined;
     }
 
     function clear() {
         data$.next([]);
-      //  selected = undefined;
+        //  selected = undefined;
     }
 
     function swapRows() {
@@ -111,13 +113,13 @@ export function getData$(): DataService {
     }
 }
 
-export function getData(): DataService {
+export function getData(): Omit<DataService, 'data$'> & Pick<DataService, 'data'> {
 
     let id: number = 1;
     let data: Array<Data> = [];
 
     return {
-        data,
+        data: () => data,
         run,
         buildData,
         add,
@@ -143,18 +145,21 @@ export function getData(): DataService {
         var colours = ["red", "yellow", "blue", "green", "pink", "brown", "purple", "brown", "white", "black", "orange"];
         var nouns = ["table", "chair", "house", "bbq", "desk", "car", "pony", "cookie", "sandwich", "burger", "pizza", "mouse", "keyboard"];
         var data: Array<Data> = [];
-    for (var i = 0; i < count; i++) {
-        data.push({ id: id, label: adjectives[_random(adjectives.length)] + " " + colours[_random(colours.length)] + " " + nouns[_random(nouns.length)] });
-        id++;
+        for (var i = 0; i < count; i++) {
+            data.push({
+                id: id,
+                label: adjectives[_random(adjectives.length)] + " " + colours[_random(colours.length)] + " " + nouns[_random(nouns.length)]
+            });
+            id++;
+        }
+        return data;
     }
-    return data;
-}
 
-    function  _random(max: number) {
+    function _random(max: number) {
         return Math.round(Math.random() * 1000) % max;
     }
 
-    function  deleteItem(item: Data, event: Event) {
+    function deleteItem(item: Data, event: Event) {
         event.preventDefault();
         for (let i = 0, l = data.length; i < l; i++) {
             if (data[i].id === item.id) {
@@ -164,31 +169,31 @@ export function getData(): DataService {
         }
     }
 
-    function  run() {
+    function run() {
         data = buildData();
     }
 
-    function  add() {
+    function add() {
         data = data.concat(buildData(1000));
     }
 
-    function  update() {
+    function update() {
         for (let i = 0; i < data.length; i += 10) {
             data[i].label += ' !!!';
         }
     }
 
-    function   runLots() {
+    function runLots() {
         data = buildData(10000);
-      //  selected = undefined;
+        //  selected = undefined;
     }
 
-    function  clear() {
+    function clear() {
         data = [];
-       // selected = undefined;
+        // selected = undefined;
     }
 
-    function  swapRows() {
+    function swapRows() {
         if (data.length > 998) {
             var a = data[1];
             data[1] = data[998];
